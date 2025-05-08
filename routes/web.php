@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListBarangController;
+use App\Http\Controllers\ListController;
+use App\Http\Controllers\ProductController;
+
 
 
  
@@ -25,7 +28,13 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
+//Route::get('/', function () {
+//    return view('list_product');
+//});
+
 
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/contact', [HomeController::class, 'contact']);
+Route::get('/list_product', [ProductController::class, 'index']);
+//Route::view('/list_product', 'list_product')->name('list_product');

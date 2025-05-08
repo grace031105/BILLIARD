@@ -1,4 +1,4 @@
-@extends('layout.list')
+@extends('layouts.list')
 
 @section('title', 'INI ADALAH JUDUL PADA META')
 @section('content')
@@ -13,9 +13,9 @@
     <tbody>
         @foreach($data as $post)
             <tr>
-                <td>{{$post['id']}}</td>
-                <td>{{$post['produk']}}</td>
-                <!--dat lainnya-->
+                <td>{{ $post['id'] }}</td>
+                <td>{{ $post['produk'] }}</td>
+                <!--data lainnya-->
             </tr>
         @endforeach
     </tbody>
